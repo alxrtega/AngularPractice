@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <h2>Sorted Table By Role Number</h2>
+    <table class="table table-striped table-bordered text-center">
+        <thead>
+            <tr>
+                <th>Name </th>
+                <th>Email</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users | orderBy:'level'">
+                <td>{{user.firstName }}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.level}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--<ul>
+        <li *ngFor="let item of users | orderBy:'firstName'">{{ item.firstName }}</li>
+    </ul>-->
+</div>
